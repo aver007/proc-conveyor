@@ -13,7 +13,7 @@ class MySafeValue:
         self.__multiproc_value = Value(*args, **kwargs)
 
     @property
-    def value(self):
+    def value(self): 
         return self.__multiproc_value.value
 
     def safe_increment(self):
@@ -334,6 +334,10 @@ class Watchdog:
         self.__handlers_obj.stop()
         self.__cons_obj.stop()
 
+
+"""
+Вот отсюда весь код нужно вынести в test
+"""
 
 def main_proc_multiple_10(ll):
     """
