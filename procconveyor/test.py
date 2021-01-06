@@ -1,3 +1,4 @@
+# Python script for testing procconveyor
 import time
 from procconveyor.procconveyor import Generator, HandlersPool, Watchdog
 
