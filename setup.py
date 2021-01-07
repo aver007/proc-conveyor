@@ -7,7 +7,7 @@ requirements = []
 
 setup(
     name="procconveyor",
-    version="0.0.1",
+    version="0.0.2",
     author="aver",
     author_email="a.v.e.r@mail.ru",
     description="A package to make conveyor of parallel data processing",
