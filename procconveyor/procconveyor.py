@@ -312,8 +312,11 @@ class Watchdog:
         print("All started")
 
     def watch(self):
-        # Пока конвеер работает он выдает статистику по своим компонентам
-        while (not self.__gen_obj.stopped) or (self.__cons_obj.received < self.__handlers_obj.transmitted):
+        # Пока работает генератор или есть отправленные в очередь и не полученные объекты
+        # он выдает статистику по своим компонентам
+        while (not self.__gen_obj.stopped) or \
+                (self.__handlers_obj.received < self.__gen_obj.transmitted) or \
+                (self.__cons_obj.received < self.__handlers_obj.transmitted):
             yield self.__get_statistic_once()  # Каждую итерацию возвращает статистику работы
 
         # после чего-останавливает

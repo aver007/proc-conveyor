@@ -1,7 +1,7 @@
 # Python script for testing procconveyor
 # one more line
 import time
-from procconveyor.procconveyor import Generator, HandlersPool, Watchdog
+from procconveyor.procconveyor import Generator, HandlersPool, Consumer, Watchdog
 
 
 def main_proc_multiple_10(ll):
